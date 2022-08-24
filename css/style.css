@@ -6,13 +6,13 @@
   --body:rgb(46, 46, 46);
   --col1:#5F9EA0 ;
   --col2:#8FBC8F ;
-  --arrow_l: url("/src/icons/arrow_w_l.png");
-  --arrow_r: url("/src/icons/arrow_w_r.png");
+  --arrow_l: url("../icons/arrow_w_l.png");
+  --arrow_r: url("../icons/arrow_w_r.png");
 }
 
 .night {
-  --arrow_l: url("/src/icons/arrow_b_l.png");
-  --arrow_r: url("/src/icons/arrow_b_r.png");
+  --arrow_l: url("../icons/arrow_b_l.png");
+  --arrow_r: url("../icons/arrow_b_r.png");
   --body:#ffffff;
   --black: #e6e6e6;
   --white: #333;
@@ -598,7 +598,7 @@ main {
   }
 }
 .projects {
-  background: linear-gradient(to bottom, #96b8ea, transparent), url("./img/sea.png");
+  background: linear-gradient(to bottom, #96b8ea, transparent), url("../img/sea.png");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: left bottom;
