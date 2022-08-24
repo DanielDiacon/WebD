@@ -1,0 +1,127 @@
+.footer {
+   width: 100%;
+   color: var(--white);
+   text-align: center;
+   background: var(--black);
+   // .footer__body
+
+   &__body{
+      margin: 20px;
+      padding: 10px 0;
+   }
+
+   // .footer__block
+
+   &__block {
+      margin: 15px;
+   }
+
+   // .footer__subscribe
+
+   &__subscribe {
+      display: inline-block;
+      border: 1px solid var(--white);
+      padding:5px 1px;
+      opacity: 0;
+      cursor: pointer;
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier($trasCube);
+   }
+   &__subscribe[data-scroll="in"]{
+      padding:5px 8px;
+      opacity: 1;
+   }
+   &__subscribe[data-scroll="out"]{
+      transition: 0.0s;
+   }
+
+   // .footer__subscribe hover
+   
+   &__subscribe:hover{
+      background: var(--white);
+      color: var(--black);
+      padding:5px 13px;
+      transition-timing-function: cubic-bezier($trasCube);      
+   }
+
+   // .footer__subscribe on click
+
+   &__subscribe:active{
+      transition-timing-function: cubic-bezier($trasCube);
+      transition-duration: .1s;
+      transform: scale(0.9);
+      
+   }
+   
+   // .footer__subscribe focus
+
+   &__subscribe:focus input{
+      width:100%;
+   }
+
+   // .follow
+
+   .follow{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+   }
+
+   // .footer__icon
+   
+   &__icon{
+      font-size: 50px;
+      padding: 10px;
+      color:var(--white);
+      background: var(--black);
+      border: 1px solid var(--white);
+      border-radius: 50%;
+   }
+   .follow &__icon{
+      transform: translatey(-5px);
+      opacity: 0;
+   }
+   .follow[data-scroll="in"] svg{
+      opacity: 1;
+      transform: translatey(0px);
+      transition-duration: .3s;
+      transition-timing-function: cubic-bezier($trasCube);
+   }
+
+   // .footer__icon hover
+
+   &__icon:hover{
+      background: var(--white);
+      color: var(--black);
+      transform: scale(1.1);
+   }
+
+   // .footer__icon on click
+
+   &__icon:active{
+
+      transform: scale(1);
+   }
+
+   // .footer__copy
+
+   &__copy{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 10px;
+      padding: 2px;
+      opacity:0;
+      transform: translatex(-2%);
+      transition-duration: .5s;
+      transition-delay: var(--v);
+      transition-timing-function: cubic-bezier($trasCube);
+   }
+   &__block[data-scroll="in"] p{
+      opacity: 1;
+      transform: translatex(0);
+   }
+   &__block[data-scroll="out"] p{
+      transition: 0.0s;
+   }
+}

@@ -1,0 +1,92 @@
+.me {
+   width:100%;
+   margin-top:  60px;
+   background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.462)), url("../img/city.png");
+   background-repeat: repeat-x;
+   background-size: contain;
+   background-position:left bottom;
+   margin-bottom: -40px;
+   animation: img_anim 2s forwards;
+   @keyframes img_anim {
+      0%{
+         
+         background-position:left bottom -100%;
+      }
+      100%{
+         background-position:left bottom;
+      }
+   }
+   &__body {
+      margin: 15px;
+      height: calc(100vh - 26px);      
+      width: calc(100% - 30px);
+      position: relative;
+   }
+   &__text {
+      display:block;
+      font-size: calc(33px + 90  * (100vw / $maxWidthContainer));
+      font-weight: 800;
+      color: var(--white);
+      transition-duration: 1s;
+      transition-delay: var(--v);
+      transition-timing-function: cubic-bezier($trasCube);
+      opacity: 0;
+      transform: translateX(-2%);
+   } 
+   &__text[data-scroll="in"]{
+      transform: translateX(0);
+      opacity: 1;
+   }
+   &__text[data-scroll="out"]{
+      transition: 0.0s;
+   }
+   &__box{
+      display: inline-block;
+      background: var(--black);
+      color: transparent;
+      padding: 15px;
+      border-radius: 15px;
+      font-size: calc(10px + 20  * (100vw / $maxWidthContainer));
+      font-weight: 700;
+      width: auto;
+      transition-duration: .6s;
+      transition-delay: .7s;
+      transform-origin: left;
+      transform: translateX(-2%);
+      transition-timing-function: cubic-bezier($trasCube);
+      opacity: 0;
+   }
+   &__box[data-scroll="in"]{
+      transform: translateX(0);
+      opacity: 1;
+      color: var(--white);
+   }
+   &__box[data-scroll="out"]{
+      transition: 0.0s;
+   }
+   &__skills{
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      background: var(--black);
+      color: var(--white);
+      padding: 15px;
+      text-align: center;
+      border-radius: 15px;
+      font-size: 15px;
+      font-weight: 700;
+      width: auto;
+      transition: .3s;
+   }
+}
+@media (max-width:767px) {
+   .me {
+      &__body {
+         margin: 15px;
+      }
+      &__box{
+      font-size: calc(13.5px + 30  * (100vw / $maxWidthContainer));
+      }
+   }
+}
+
