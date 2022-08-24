@@ -1,0 +1,83 @@
+.musics {
+  padding: 50px 0;
+}
+.musics__body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--white);
+  width: 400px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, var(--green), var(--greenlight));
+}
+.musics__curent {
+  width: 400px;
+  height: 500px;
+  padding: 50px;
+  text-align: center;
+}
+.musics__disc {
+  font-size: 300px;
+  color: var(--white);
+}
+.musics__all {
+  width: auto;
+  height: 400px;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: var(--white);
+}
+.musics__all::-webkit-scrollbar {
+  display: block;
+  width: 35px;
+}
+.musics__all::-webkit-scrollbar-thumb {
+  background: var(--greenlight);
+  border: 10px solid transparent;
+  background-clip: content-box;
+  border-radius: 20px;
+}
+
+.music {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.music__info {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, var(--green), var(--greenlight));
+  padding: 20px;
+  border-radius: 5px;
+  color: var(--white);
+}
+.music__text {
+  font-size: 20px;
+  font-weight: 700;
+}
+.music__line {
+  display: none;
+}
+
+.music.focus {
+  position: absolute;
+  top: 340px;
+  left: 0;
+  width: calc(100% - 40px);
+  margin: 20px;
+}
+.music.focus .music__info.focus {
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  padding: 15px;
+}
+.music.focus .music__line.focus {
+  display: block;
+  transform-origin: left;
+  transform: translate(0, 20px) scale(1.15);
+}

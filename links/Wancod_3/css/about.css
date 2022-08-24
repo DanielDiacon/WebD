@@ -1,0 +1,37 @@
+.about {
+  background: var(--white);
+  padding: 50px 0;
+}
+.about__body {
+  padding: 30px;
+}
+.about__text {
+  font-weight: 800;
+  font-size: 100px;
+  background-color: red;
+  background: linear-gradient(to right, #014e30 20%, #05b46e 40%, #05b46e 60%, #014e30 80%);
+  background-size: 200% auto;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-animation: shine 2s linear infinite;
+          animation: shine 2s linear infinite;
+}
+@-webkit-keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@media (max-width: 600px) {
+  .about__text {
+    font-size: 70px;
+  }
+}

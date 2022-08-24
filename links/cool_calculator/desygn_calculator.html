@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="box_calculator">
+		<div class="calculator">
+			<div class="part_top_box">
+				<div class="part_top">
+					<div class="input">
+					</div>
+				</div>
+			</div>
+			<div class="part_bottom_box">
+				<table class="part_bottom">
+					<tr>
+						<td colspan="2">
+							<div class="button"><a>AC</a></div>
+						</td>
+						<td>
+							<div class="button"><a>.</a></div>
+						</td>
+						<td>
+							<div class="button"><a>=</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="button"><a>7</a></div>
+						</td>
+						<td>
+							<div class="button"><a>8</a></div>
+						</td>
+						<td>
+							<div class="button"><a>9</a></div>
+						</td>
+						<td>
+							<div class="button"><a>-</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="button"><a>4</a></div>
+						</td>
+						<td>
+							<div class="button"><a>5</a></div>
+						</td>
+						<td>
+							<div class="button"><a>6</a></div>
+						</td>
+						<td rowspan="2">
+							<div class="button"><a>+</a></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="button"><a>1</a></div>
+						</td>
+						<td>
+							<div class="button"><a>2</a></div>
+						</td>
+						<td>
+							<div class="button"><a>3</a></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let button = document.querySelector('.button');
+
+		button.onclick = function(){
+		button.classList.toggle('active')
+		}
+	</script>
+</body>
+</html>

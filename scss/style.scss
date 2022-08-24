@@ -1,0 +1,157 @@
+// import fonts/font <========================================>
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap');
+//<=>
+
+// import fonts/font <========================================>
+// if need to import local fonts
+//@import "fonts/fonts";
+//<=>
+
+// default font / default font size <=========================>
+$fontFamily: 'Rubik', sans-serif;
+$fontSize: 16px;
+//<=>
+
+// base colors <==============================================>
+$trasCube:0.68,-0.55,0.265,1.55;
+//<=>
+
+// base colors <==============================================>
+:root{
+--black: #333;
+--white: #fff;
+--body:rgb(46, 46, 46);
+--col1:#5F9EA0 ;
+--col2:#8FBC8F ;
+--arrow_l: url('/src/icons/arrow_w_l.png');
+--arrow_r: url('/src/icons/arrow_w_r.png');
+}
+//<=>
+
+// night mode <==============================================>
+
+.night{
+   --arrow_l: url('/src/icons/arrow_b_l.png');
+   --arrow_r: url('/src/icons/arrow_b_r.png');
+   --body:#ffffff;
+   --black: #e6e6e6;
+   --white: #333;
+}
+//<=>
+
+// max width for container <==================================>
+$maxWidthContainer: 1250;
+//<=>
+
+// null style <===============================================>
+@import '_null.scss';
+//<=>
+
+// general style <============================================>
+body{
+   //main font family
+   font-family: $fontFamily;
+   //main font size
+   font-size:$fontSize;
+   //main font width
+   font-weight: 500;
+   //scroll block when open burger
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+   }
+}
+//<=>
+
+
+// wrapper <==================================================>
+.wrapper{
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+//<=>
+
+// container <================================================>
+.container{
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+   //fix for slider
+   > * {
+      min-width: 0;
+   }
+}
+//<=>
+
+// the footer to the bottom of the page <=====================>
+main{
+   //main color
+   background: linear-gradient(45deg , var(--col1) , var(--col2));
+   //heaeder space 
+   flex: 1 1 auto;
+}
+//<=>
+
+// scroll bar <===============================================>
+::-webkit-scrollbar{
+   display: none;
+}
+//<=>
+
+
+
+//header <====================================================>
+@import '_header.scss';
+//<=>
+
+//header <====================================================>
+@import '_projects.scss';
+//<=>
+
+//header <====================================================>
+@import '_aboutme.scss';
+//<=>
+
+//header <====================================================>
+@import '_skills.scss';
+//<=>
+
+//footer <====================================================>
+@import '_footer.scss';
+//<=>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//http://192.168.255.95:5500/src/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

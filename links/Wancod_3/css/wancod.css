@@ -1,0 +1,11 @@
+.wancod__body {
+  padding: 30px;
+}
+.wancod__title {
+  color: var(--black);
+  font-size: 50px;
+}
+.wancod__text {
+  padding: 20px 0;
+  color: var(--black);
+}

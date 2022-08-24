@@ -1,0 +1,90 @@
+.skills {
+  padding: 50px 0;
+  background: linear-gradient(90deg, var(--green), var(--greenlight));
+}
+.skills__title {
+  font-size: 50px;
+  text-align: center;
+  padding: 30px;
+}
+.skills__body {
+  margin: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+.skills__skill {
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+  background: var(--col);
+  border-radius: 50%;
+}
+.skills__icon {
+  font-size: 100px;
+  color: var(--white);
+}
+.skills__circle {
+  height: 260px;
+  width: 260px;
+  margin: 20px;
+  position: relative;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.skills__inner {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 3;
+  height: 180px;
+  width: 180px;
+  background: var(--col);
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.skills__circle::after {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  bottom: -200px;
+  transform: rotate(4deg);
+  left: -50px;
+  height: 400px;
+  width: 400px;
+  background: var(--white);
+  -webkit-animation: wather 2s infinite;
+          animation: wather 2s infinite;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@-webkit-keyframes wather {
+  0% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+@keyframes wather {
+  0% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+.skills__circle_2::after {
+  bottom: -170px;
+}
+.skills__circle_3::after {
+  bottom: -230px;
+}
+.skills__circle_4::after {
+  bottom: -380px;
+}

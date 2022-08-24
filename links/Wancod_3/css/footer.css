@@ -1,0 +1,128 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(90deg, var(--green), var(--greenlight));
+}
+.footer__body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__top {
+  margin: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .footer__top {
+    margin: 30px;
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto);
+    position: relative;
+  }
+  .footer__block {
+    margin: 0 auto;
+  }
+}
+.footer__inputs {
+  padding-top: 20px;
+  display: flex;
+}
+.footer__inputs input {
+  padding: 15px;
+  display: block;
+  width: auto;
+  padding-left: 15px;
+  background: transparent;
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--white);
+  border-bottom: 5px solid var(--white);
+}
+.footer__inputs input:focus {
+  background: transparent;
+}
+.footer input:-webkit-autofill,
+.footer input:-webkit-autofill:hover,
+.footer input:-webkit-autofill:focus,
+.footer input:-webkit-autofill:active {
+  -webkit-transition: background-color 500000000s;
+  transition: background-color 500000000s;
+  -webkit-text-fill-color: var(--white) !important;
+}
+.footer input::-moz-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  color: var(--black);
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--white);
+}
+.footer input:-ms-input-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  color: var(--black);
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--white);
+}
+.footer input::placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  color: var(--black);
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--white);
+}
+.footer__submit {
+  border-bottom: 5px solid var(--white);
+  background: transparent;
+  padding: 15px;
+  color: var(--white);
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.footer__title_follow {
+  padding-bottom: 10px;
+}
+.footer .footer__retela {
+  font-size: 50px;
+  padding: 10px 10px 10px 0;
+  color: var(--white);
+}
+
+.footer__bottom {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  gap: 20px;
+}
+.footer__copy {
+  font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .footer .title {
+    text-align: center;
+  }
+  .footer__bottom {
+    display: block;
+  }
+  .footer__copy {
+    padding: 5px 0;
+    font-size: 15px;
+  }
+}
